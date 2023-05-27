@@ -541,7 +541,7 @@ public class PackageUtils {
              * the package and removes its apk automatically if its installed as a user app instead of system app
              * W/PackageManager: Failed to parse /path/to/com.termux.tasker.apk: Signature mismatch for shared user: SharedUserSetting{xxxxxxx com.termux/10xxx}
              */
-            PackageInfo packageInfo = getPackageInfoForPackage(context, packageName, PackageManager.GET_SIGNATURES);
+            PackageInfo packageInfo = getPackageInfoForPackage(context, packageName, PackageManager.GET_SIGNING_CERTIFICATES);
             if (packageInfo == null)
                 return null;
             return DataUtils.bytesToHex(MessageDigest.getInstance("SHA-256").digest(packageInfo.signatures[0].toByteArray()));

@@ -532,22 +532,27 @@ public class PackageUtils {
      */
     @Nullable
     public static String getSigningCertificateSHA256DigestForPackage(@NonNull final Context context, @NonNull final String packageName) {
-        try {
-            /*
-             * Todo: We may need AndroidManifest queries entries if package is installed but with a different signature on android 11
-             * https://developer.android.com/training/package-visibility
-             * Need a device that allows (manual) installation of apk with mismatched signature of
-             * sharedUserId apps to test. Currently, if its done, PackageManager just doesn't load
-             * the package and removes its apk automatically if its installed as a user app instead of system app
-             * W/PackageManager: Failed to parse /path/to/com.termux.tasker.apk: Signature mismatch for shared user: SharedUserSetting{xxxxxxx com.termux/10xxx}
-             */
-            PackageInfo packageInfo = getPackageInfoForPackage(context, packageName, PackageManager.GET_SIGNATURES);
-            if (packageInfo == null)
-                return null;
-            return DataUtils.bytesToHex(MessageDigest.getInstance("SHA-256").digest(packageInfo.signatures[0].toByteArray()));
-        } catch (final Exception e) {
-            return null;
-        }
+      try {
+          /*
+           * Todo: We may need AndroidManifest queries entries if package is installed but with a different signature on android 11
+           * https://developer.android.com/training/package-visibility
+           * Need a device that allows (manual) installation of apk with mismatched signature of
+           * sharedUserId apps to test. Currently, if its done, PackageManager just doesn't load
+           * the package and removes its apk automatically if its installed as a user app instead of system app
+           * W/PackageManager: Failed to parse /path/to/com.termux.tasker.apk: Signature mismatch for shared user: SharedUserSetting{xxxxxxx com.termux/10xxx}
+           */
+          PackageInfo packageInfo = getPackageInfoForPackage(context, packageName, PackageManager.GET_SIGNING_CERTIFICATES);
+          if (packageInfo == null || packageInfo.signingInfo == null)
+              return null;
+
+          SigningCertificate[] signingCertificates = packageInfo.signingInfo.getSigningCertificates();
+          if (signingCertificates == null || signingCertificates.length == 0)
+              return null;
+
+          return DataUtils.bytesToHex(MessageDigest.getInstance("SHA-256").digest(signingCertificates[0].getEncodedCertificate()));
+      } catch (final Exception e) {
+          return null;
+      }
     }
 
     /**

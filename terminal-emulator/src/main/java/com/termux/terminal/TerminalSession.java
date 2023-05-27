@@ -384,7 +384,7 @@ public final class TerminalSession extends TerminalOutput {
     }
 
     @SuppressLint("HandlerLeak")
-    class MainThreadHandler extends Handler {
+    class MainThreadHandler extends Handler(Looper.getMainLooper()) {
 
         final byte[] mReceiveBuffer = new byte[4 * 1024];
 

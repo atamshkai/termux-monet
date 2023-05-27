@@ -474,7 +474,7 @@ public class PackageUtils {
      */
     @Nullable
     public static Integer getVersionCodeForPackage(@Nullable final PackageInfo packageInfo) {
-        return packageInfo != null ? packageInfo.versionCode : null;
+        return packageInfo != null ? (int) packageInfo.getLongVersionCode() : null;
     }
 
     /**

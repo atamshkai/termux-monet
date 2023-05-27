@@ -43,7 +43,6 @@
         android:allowBackup="true"
         android:fullBackupContent="true"
         android:banner="@drawable/banner"
-        android:extractNativeLibs="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/application_name"
         android:hardwareAccelerated="true"

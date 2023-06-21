@@ -309,5 +309,5 @@ Users must post complete report (optionally without sensitive info) when reporti
   </a>
 </div>
 
-## Download
-https://github.com/HardcodedCat/termux-monet/releases/tag/v0.118.0-32-Hotfix2
+[Download](https://github.com/HardcodedCat/termux-monet/releases/tag/v0.118.0-32-Hotfix2)  is a unofficial, modified fork of [Termux]
+

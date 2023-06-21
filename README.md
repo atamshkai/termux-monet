@@ -5,6 +5,8 @@
 <div align="center">
   <a href="https://github.com/HardcodedCat/termux-monet/actions/workflows/debug_build.yml?query=branch%3Amaster">
     <img src="https://img.shields.io/github/actions/workflow/status/HardcodedCat/termux-monet/debug_build.yml?branch=master&label=Build&logo=gradle"/>
+[Download](https://github.com/HardcodedCat/termux-monet/releases/tag/v0.118.0-32-Hotfix2)
+
   </a>
   <a href="https://github.com/HardcodedCat/termux-monet/actions/workflows/run_tests.yml?query=branch%3Amaster">
     <img src="https://img.shields.io/github/actions/workflow/status/HardcodedCat/termux-monet/run_tests.yml?branch=master&label=Test&logo=gradle"/>
@@ -308,6 +310,4 @@ Users must post complete report (optionally without sensitive info) when reporti
     <img src="https://img.shields.io/github/forks/HardcodedCat/termux-monet?style=social"/>
   </a>
 </div>
-
-[Download](https://github.com/HardcodedCat/termux-monet/releases/tag/v0.118.0-32-Hotfix2)  is a unofficial, modified fork of [Termux]
 

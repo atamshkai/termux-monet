@@ -308,3 +308,6 @@ Users must post complete report (optionally without sensitive info) when reporti
     <img src="https://img.shields.io/github/forks/HardcodedCat/termux-monet?style=social"/>
   </a>
 </div>
+
+## Download
+https://github.com/HardcodedCat/termux-monet/releases/tag/v0.118.0-32-Hotfix2

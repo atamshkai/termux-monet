@@ -40,11 +40,10 @@
 <img src="https://hosted.weblate.org/widgets/termux-monet/-/multi-blue.svg" alt="Translation status" align="center"/>
 </a>
 
-[Download](https://github.com/HardcodedCat/termux-monet/releases/tag/v0.118.0-32-Hotfix2)
-
-
 #### Currently Using Weblate for Translations!
 Join us in https://hosted.weblate.org/engage/termux-monet/
+
+[Download Here](https://github.com/HardcodedCat/termux-monet/releases/tag/v0.118.0-32-Hotfix2)
 
 ***
 ## MONET IS ONLY AVAILABLE ON `ANDROID 12+`!

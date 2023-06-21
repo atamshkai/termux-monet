@@ -43,6 +43,7 @@
 #### Currently Using Weblate for Translations!
 Join us in https://hosted.weblate.org/engage/termux-monet/
 
+### Downloads
 [Download Here](https://github.com/HardcodedCat/termux-monet/releases/tag/v0.118.0-32-Hotfix2)
 
 ***
